@@ -22,6 +22,7 @@ cd ~
 # Setup homebrew
 if hash brew &> /dev/null; then
     echo_ok "Homebrew already installed"
+    brew update
 else
     echo_warn "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -33,7 +34,7 @@ brew tap  homebrew/python
 brew tap  homebrew/science
 brew install  git pandoc wget youtube-dl
 brew install  autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg
-brew install  libpng libtool libyaml mpfr ninja numpy python qt qwt valgrind
+brew install  libpng libtool libyaml mpfr ninja numpy python valgrind
 
 # setup homebrew caskroom, to install GUI apps (binaries)
 brew cask install caskroom/cask/brew-cask
@@ -84,34 +85,38 @@ fi
 brew tap caskroom/fonts 
 brew cask install  font-inconsolata # my favourite font for coding
 
-echo_warn "Disabling Photos from auto-starting when plugging in a camera."
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
+read -p "Do you want to change settings too? (if no, you will proceed to installation only)" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo_warn "Disabling Photos from auto-starting when plugging in a camera."
+    defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 
-echo_warn "Expanding save and print dialogs by default"
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+    echo_warn "Expanding save and print dialogs by default"
+    defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+    defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+    defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+    defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
-echo_warn "Always showing scroll bars"
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+    echo_warn "Always showing scroll bars"
+    defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
-echo_warn "Using oldschool scrolling direction (for trackpad)"
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+    echo_warn "Using oldschool (unnatural) scrolling direction (for trackpad)"
+    defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-echo_warn "Turning off auto-spell globally"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+    echo_warn "Turning off auto-spell globally"
+    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-echo_warn "Cleaning up and customizing the dock."
-defaults delete com.apple.dock persistent-apps # unpin apps
-defaults delete com.apple.dock persistent-others # unpin more apps
-defaults write com.apple.dock pinning -string start # place at left
-defaults write com.apple.dock mineffect scale # just scale minimizing windows
-killall Dock
+    echo_warn "Cleaning up and customizing the dock."
+    defaults delete com.apple.dock persistent-apps # unpin apps
+    defaults delete com.apple.dock persistent-others # unpin more apps
+    defaults write com.apple.dock pinning -string start # place at left
+    defaults write com.apple.dock mineffect scale # just scale minimizing windows
+    killall Dock
 
-echo_warn "Tell Chrome to use system dialog for printing"
-defaults write com.google.Chrome DisablePrintPreview -boolean true
-
+    echo_warn "Tell Chrome to use system dialog for printing"
+    defaults write com.google.Chrome DisablePrintPreview -boolean true
+fi
 
 echo_ok "You will have to startup some apps manually once (like spectacle)"
 echo_ok "You have to manually set which apps automatically start on startup"
