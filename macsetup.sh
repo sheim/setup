@@ -63,6 +63,9 @@ brew cask install  mactex # tex, latex
 brew cask install  apptrap # proper uninstallation of apps
 brew cask install  spectacle # must launch, and add to self-startup manually
 
+brew tap caskroom/fonts 
+brew cask install  font-inconsolata # my favourite font for coding
+
 read -p "Do you want to install microsoft office 2011 for Mac? (y/n)" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -81,9 +84,6 @@ then
     set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD 
     echo_ok "to switch back to bash, use chsh -s /bin/bash"
 fi
-
-brew tap caskroom/fonts 
-brew cask install  font-inconsolata # my favourite font for coding
 
 read -p "Do you want to change settings too? (if no, you will proceed to installation only)" -n 1 -r
 echo
