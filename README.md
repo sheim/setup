@@ -1,6 +1,6 @@
 # Setup script
 
-Just a bash script (for now) to automize a lot of set up stuff when getting a new mac. This includes setting up [homebrew](http://brew.sh/), then mostly using `brew` to install several rather standard libraries and `brew cask` to install several apps (see list below). Also, some settings are done for system preferences to be the way I like them. You probably have different preferences, so the script will ask if you want to do this (amongst other things, it removes almost everying from the dock, so you have a clean slate).  
+Just a bash script (for now) to automize a lot of set up stuff when getting a new mac. This includes setting up [homebrew](http://brew.sh/), then mostly using `brew` to install several rather standard libraries and `brew cask` to install several apps (see list below). Also, some settings are done for system preferences to be the way I like them. You probably have different preferences, so the script will ask if you want to do this (amongst other things, it removes almost everying from the dock, so you have a clean slate).  If you have comments or suggestions (or anything else), feel free to just start an issue or drop me a line.
 
 ## List of libraries
 - **git** the ubiquitous git VCS
@@ -8,6 +8,9 @@ Just a bash script (for now) to automize a lot of set up stuff when getting a ne
 - **wget** get stuff from the web (required by other stuff)
 - **youtube-dl** command-line tool for downloading youtube videos
 - **autoconf, automake, cmake, doxygen, gcc, etc...** programming tools, mostly C++ and Python related
+
+## Git set-up
+Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight and other things. See [wiki](https://en.wikipedia.org/wiki/.DS_Store) and [se](http://apple.stackexchange.com/questions/69467/consequences-of-deleting-ds-store). This can get annoying if you mistakenly add it to a repository with `git add --all`, as it will continuously change (and you definitely don't want to push it to a remote). So it gets added to `.gitignore_global` for all our local repos.
 
 ## List of apps
 - **osxfuse** mount remote drives with sshfs

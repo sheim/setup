@@ -36,6 +36,14 @@ brew install  git pandoc wget youtube-dl
 brew install  autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg
 brew install  libpng libtool libyaml mpfr ninja numpy python valgrind
 
+# On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
+
+echo ".DS_Store" >> ~/.gitignore_global
+echo "._.DS_Store" >> ~/.gitignore_global
+echo "**/.DS_Store" >> ~/.gitignore_global
+echo "**/._.DS_Store" >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
 # setup homebrew caskroom, to install GUI apps (binaries)
 brew cask install caskroom/cask/brew-cask
 
