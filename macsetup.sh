@@ -70,6 +70,7 @@ brew cask install  dropbox
 brew cask install  mactex # tex, latex
 brew cask install  apptrap # proper uninstallation of apps
 brew cask install  spectacle # must launch, and add to self-startup manually
+brew cask install cgoban # client for playing go on KGS
 
 brew tap caskroom/fonts 
 brew cask install  font-inconsolata # my favourite font for coding
