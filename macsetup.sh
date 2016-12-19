@@ -32,7 +32,7 @@ echo_warn "Installing standard homebrew libraries"
 
 brew tap  homebrew/python
 brew tap  homebrew/science
-brew install  git pandoc wget youtube-dl
+brew install  git pandoc wget youtube-dl htop
 brew install  autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg
 brew install  libpng libtool libyaml mpfr ninja numpy python valgrind
 

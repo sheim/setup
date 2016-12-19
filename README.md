@@ -7,6 +7,7 @@ Just a bash script (for now) to automize a lot of set up stuff when getting a ne
 - **pandoc** a useful command-line tool for translating markdown to other formats (such as wiki markup)
 - **wget** get stuff from the web (required by other stuff)
 - **youtube-dl** command-line tool for downloading youtube videos
+- **htop** the ubiquitous process viewer (think Activity monitor in the terminal)
 - **autoconf, automake, cmake, doxygen, gcc, etc...** programming tools, mostly C++ and Python related
 
 ## Git set-up
