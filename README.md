@@ -54,5 +54,8 @@ Script asks if you want to do these, so you can run the script just for the libr
 - Tell Chrome to use system-dialog for printing instead of built-in dialog (I like consistency) 
 
 ## Further small settings I like:
-
 Set the caps-lock button (which I never use, but is placed in a really ergonomic position) to ctrl, and set Spotlight to active with ctrl+spacebar (instead of cmd+spacebar). Inspired from the JIS keyboard, this is fantastic.
+
+#### iterm2
+Under Preferences>Keys>KeyMappings, change `^+tab` to `Next Tab` and `^+shift+tab` to `Previous Tab`, to match Chrome behaviour (and be more intuitive imho).  
+Change font to Inconsolata 16.
