@@ -57,5 +57,16 @@ Script asks if you want to do these, so you can run the script just for the libr
 Set the caps-lock button (which I never use, but is placed in a really ergonomic position) to ctrl, and set Spotlight to active with ctrl+spacebar (instead of cmd+spacebar). Inspired from the JIS keyboard, this is fantastic.
 
 #### iterm2
-Under Preferences>Keys>KeyMappings, change `^+tab` to `Next Tab` and `^+shift+tab` to `Previous Tab`, to match Chrome behaviour (and be more intuitive imho).  
+Under Preferences > Keys > KeyMappings, change `^+tab` to `Next Tab` and `^+shift+tab` to `Previous Tab`, to match Chrome behaviour (and be more intuitive imho).  
 Change font to Inconsolata 16.
+
+#### Sublime Text 3
+Under `Sublime Text > Preferences > Key Bindings`, add the following to obtain the same tabbing behaviour as Chrome (simple next/previous).  
+```
+[
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+]
+```
+
+**To Do:** Add the Sublime Text preferences here, to be pulled directly.
