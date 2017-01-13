@@ -32,17 +32,9 @@ echo_warn "Installing standard homebrew libraries"
 
 brew tap  homebrew/python
 brew tap  homebrew/science
-brew install  git pandoc wget youtube-dl htop
+brew install  git pandoc wget youtube-dl htop fdupes
 brew install  autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg
 brew install  libpng libtool libyaml mpfr ninja numpy python valgrind
-
-# On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
-
-echo ".DS_Store" >> ~/.gitignore_global
-echo "._.DS_Store" >> ~/.gitignore_global
-echo "**/.DS_Store" >> ~/.gitignore_global
-echo "**/._.DS_Store" >> ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
 
 # setup homebrew caskroom, to install GUI apps (binaries)
 brew cask install caskroom/cask/brew-cask
@@ -74,6 +66,31 @@ brew cask install cgoban # client for playing go on KGS
 
 brew tap caskroom/fonts 
 brew cask install  font-inconsolata # my favourite font for coding
+
+# Set up git settings
+# On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
+echo ".DS_Store" >> ~/.gitignore_global
+echo "._.DS_Store" >> ~/.gitignore_global
+echo "**/.DS_Store" >> ~/.gitignore_global
+echo "**/._.DS_Store" >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
+# Use diff3 format, for much easier conflict merging
+git config --global merge.conflictstyle diff3
+# Use keychain to manage your passwords  ### This should be done automatically by homebrew
+# git config --global credential.helper osxkeychain
+# use Sublime as standard git editor
+git config --global core.editor subl
+
+read -p "Are you Steve Heim? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    git config --global user.name "Steve Heim"
+    git config --global user.email heim.steve@gmail.com
+else
+    echo "You should set up your git config --global user.name and user.email"
+fi
 
 read -p "Do you want to install microsoft office 2011 for Mac? (y/n)" -n 1 -r
 echo    # (optional) move to a new line
