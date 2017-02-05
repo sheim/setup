@@ -59,7 +59,7 @@ Set the caps-lock button (which I never use, but is placed in a really ergonomic
 
 #### iterm2
 Under Preferences > Keys > KeyMappings, change `^+tab` to `Next Tab` and `^+shift+tab` to `Previous Tab`, to match Chrome behaviour (and be more intuitive imho).  
-Change font to Inconsolata 16.
+Change font to _Inconsolata_ 16pt, and `Non-ASCII Font` to _Inconsolata for Powerline_ 16pt.
 
 #### Sublime Text 3
 Under `Sublime Text > Preferences > Key Bindings`, add the following to obtain the same tabbing behaviour as Chrome (simple next/previous).  

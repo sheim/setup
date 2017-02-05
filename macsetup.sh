@@ -66,6 +66,7 @@ brew cask install cgoban # client for playing go on KGS
 
 brew tap caskroom/fonts 
 brew cask install  font-inconsolata # my favourite font for coding
+brew cask install font-inconsolata-for-powerline
 
 # Set up git settings
 # On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
@@ -108,6 +109,9 @@ then
     chsh -s /usr/local/bin/fish # make default
     # make folder colors readable on dark background
     set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD 
+    # get oh-my-fish
+    curll -L http://get.oh-my.fish | fish
+    
     echo_ok "to switch back to bash, use chsh -s /bin/bash"
 fi
 
