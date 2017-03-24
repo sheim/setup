@@ -110,7 +110,7 @@ then
     # make folder colors readable on dark background
     set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD 
     # get oh-my-fish
-    curll -L http://get.oh-my.fish | fish
+    curl -L https://get.oh-my.fish | fish
     
     echo_ok "to switch back to bash, use chsh -s /bin/bash"
 fi
