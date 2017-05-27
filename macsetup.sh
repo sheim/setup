@@ -53,8 +53,7 @@ brew cask install  flux # adjust screen to be eye-friendly
 brew cask install  google-chrome
 brew cask install  firefox
 brew cask install  iterm2 # best terminal
-# brew cask install  nvalt # notational velocity fork, to be tested
-brew cask install  notational-velocity # great for notes
+brew cask install  nvalt # fork of notational-velocity, a little less pretty but better markdown support
 brew cask install  vlc # video
 brew cask install  the-unarchiver # unzip and untar
 brew cask install  skype
@@ -63,6 +62,8 @@ brew cask install  mactex # tex, latex
 brew cask install  apptrap # proper uninstallation of apps
 brew cask install  spectacle # must launch, and add to self-startup manually
 brew cask install cgoban # client for playing go on KGS
+brew cask install nomachine # remote desktop client
+brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
 
 brew tap caskroom/fonts 
 brew cask install  font-inconsolata # my favourite font for coding
