@@ -64,6 +64,9 @@ brew cask install  spectacle # must launch, and add to self-startup manually
 brew cask install cgoban # client for playing go on KGS
 brew cask install nomachine # remote desktop client
 brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
+brew cask install hipchat # collaboration tool
+brew cask install inkscape
+brew cask install nomachine # remote desktop
 
 brew tap caskroom/fonts 
 brew cask install  font-inconsolata # my favourite font for coding
