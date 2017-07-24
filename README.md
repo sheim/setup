@@ -26,7 +26,7 @@ Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight
 - **google-chrome**
 - **firefox**
 - **iterm2** A great terminal, completely eclipses the default macOS terminal
-- [**notational-velocity**](http://notational.net/) A fantastic, lightweight note-taker. A newer fork called [nvalt](http://brettterpstra.com/projects/nvalt/) is available, but I haven't tested it.
+- [**notational-velocity**](http://brettterpstra.com/projects/nvalt/) A fantastic, lightweight note-taker. A newer fork called [nvalt](http://notational.net/) is available, but I haven't tested it.
 - **vlc** the most reliable video-player
 - **the-unarchiver**
 - **skype**
