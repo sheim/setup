@@ -26,7 +26,7 @@ Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight
 - **google-chrome**
 - **firefox**
 - **iterm2** A great terminal, completely eclipses the default macOS terminal
-- [**notational-velocity**](http://brettterpstra.com/projects/nvalt/) A fantastic, lightweight note-taker. A newer fork called [nvalt](http://notational.net/) is available, but I haven't tested it.
+- [**nvalt**](http://brettterpstra.com/projects/nvalt/) A fantastic, lightweight note-taker. This is a fork from [notational-velocity](http://notational.net/), which I think is actually prettier, but unfortunately doesn't have markdown support.
 - **vlc** the most reliable video-player
 - **the-unarchiver**
 - **skype**
@@ -35,6 +35,11 @@ Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight
 - **apptrap** Nifty app for making sure all app-files are removed when moving an app to the garbage bin
 - **spectacle** menu-bar app providing hotkeys for resizing windows how you want (which has been built-into msft windows forever)
 - **cgoban** Client for playing go on the KGS server
+- **nomachine** remote desktop client
+- **flip4mac** to convert `.wmv` format videos, especially in powerpoint presentations.
+- **hipchat** collaboration chat from Atlassian Confluence
+- **mendeley-desktop** app for organizing your collection of papers
+
 - **inconsolata** a great font (not an app) for coding
 
 ### Optional (on ask)
