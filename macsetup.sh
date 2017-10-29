@@ -62,11 +62,10 @@ brew cask install  mactex # tex, latex
 brew cask install  apptrap # proper uninstallation of apps
 brew cask install  spectacle # must launch, and add to self-startup manually
 brew cask install cgoban # client for playing go on KGS
-brew cask install nomachine # remote desktop client
+# brew cask install nomachine # remote desktop client
 brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
 brew cask install hipchat # collaboration tool
 brew cask install inkscape
-brew cask install nomachine # remote desktop
 brew cask install mendeley-desktop
 
 brew tap caskroom/fonts 
@@ -94,21 +93,6 @@ then
     brew cask install  microsoft-office-2011
 fi
 
-read -p "Do you want to use the fish shell instead of bash? (y/n)" -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    brew install  fish
-    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells # add to shells
-    chsh -s /usr/local/bin/fish # make default
-    # make folder colors readable on dark background
-    set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD 
-    # get oh-my-fish
-    curl -L https://get.oh-my.fish | fish
-    
-    echo_ok "to switch back to bash, use chsh -s /bin/bash"
-fi
-
 read -p "Do you want to change settings too?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -134,9 +118,9 @@ then
     echo_warn "Cleaning up and customizing the dock."
     defaults delete com.apple.dock persistent-apps # unpin apps
     defaults delete com.apple.dock persistent-others # unpin more apps
-    defaults write com.apple.dock pinning -string start # place at left
-    defaults write com.apple.dock mineffect scale # just scale minimizing windows
-    killall Dock
+    # defaults write com.apple.dock pinning -string start # place at left
+    defaults write com.apple.dock mineffect scale # just scale minimizing windows instead of fancy minimize
+    killall Dock # restart dock
 
     echo_warn "Tell Chrome to use system dialog for printing"
     defaults write com.google.Chrome DisablePrintPreview -boolean true
@@ -145,3 +129,18 @@ fi
 echo_ok "You will have to startup some apps manually once (like spectacle)"
 echo_ok "You have to manually set which apps automatically start on startup, under 'preferences > users & groups > login items'"
 echo_ok "You should set up your `git config --global user.name and user.email`"
+
+read -p "Do you want to use the fish shell instead of bash? (y/n)" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    brew install  fish
+    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells # add to shells
+    chsh -s /usr/local/bin/fish # make default
+    # make folder colors readable on dark background
+    set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD 
+    # get oh-my-fish
+    curl -L https://get.oh-my.fish | fish
+    
+    echo_ok "to switch back to bash, use chsh -s /bin/bash"
+fi
