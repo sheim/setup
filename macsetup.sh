@@ -42,7 +42,7 @@ brew cask install caskroom/cask/brew-cask
 echo_warn "Installing apps..."
 # Mostly standard apps
 brew cask install osxfuse
-brew install homebrew/fuse/sshfs
+brew install sshfs
 brew cask install  xquartz
 brew cask install  java
 brew cask install  keepingyouawake # alternative to caffeine
