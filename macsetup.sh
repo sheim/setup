@@ -30,8 +30,9 @@ fi
 
 echo_warn "Installing standard homebrew libraries"
 
-brew install  git pandoc wget youtube-dl htop fdupes
-brew install  autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg
+brew install  git pandoc wget youtube-dl htop fdupes todolist
+brew install ffmpeg imagemagick ghostscript git-lfs 
+brew install  autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg gdb
 brew install  libpng libtool libyaml mpfr ninja numpy python valgrind
 
 # setup homebrew caskroom, to install GUI apps (binaries)
