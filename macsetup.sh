@@ -14,7 +14,10 @@ echo_ok "Install starting. You may be asked for your password (for sudo)."
 xcode-select --install
 
 echo_warn "Making /usr/local writeable, and creating /usr/local/bin"
-sudo chown -R $(whoami) /usr/local
+# sudo chown -R $(whoami) /usr/local
+# In high-sierra /usr/local can no longer be chowned
+# see https://github.com/Homebrew/brew/issues/3228
+sudo chown -R $(whoami) $(brew --prefix)/*
 mkdir -p /usr/local/bin
 
 cd ~
