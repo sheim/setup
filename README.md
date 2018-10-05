@@ -9,6 +9,7 @@ Just a bash script (for now) to automize a lot of set up stuff when getting a ne
 - **youtube-dl** command-line tool for downloading youtube videos
 - **htop** the ubiquitous process viewer (think Activity monitor in the terminal)
 - **fdupes** find (and delete) duplicate files by comparing md5s
+- **todolist** lightweight todo list in the terminal
 - **autoconf, automake, cmake, doxygen, gcc, etc...** programming tools, mostly C++ and Python related
 
 ## Git set-up
@@ -35,10 +36,9 @@ Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight
 - **apptrap** Nifty app for making sure all app-files are removed when moving an app to the garbage bin
 - **spectacle** menu-bar app providing hotkeys for resizing windows how you want (which has been built-into msft windows forever)
 - **cgoban** Client for playing go on the KGS server
-- **nomachine** remote desktop client
 - **flip4mac** to convert `.wmv` format videos, especially in powerpoint presentations.
 - **hipchat** collaboration chat from Atlassian Confluence
-- **mendeley-desktop** app for organizing your collection of papers
+- **handbrake** video conversion tool
 
 - **inconsolata** a great font (not an app) for coding
 
