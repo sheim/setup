@@ -34,9 +34,10 @@ fi
 echo_warn "Installing standard homebrew libraries"
 
 brew install git pandoc wget youtube-dl htop fdupes todolist
-brew install ffmpeg imagemagick ghostscript git-lfs 
+brew install ffmpeg imagemagick ghostscript git-lfs git-latexdiff
 brew install autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg gdb
 brew install libpng libtool libyaml mpfr ninja numpy python valgrind
+
 
 # setup homebrew caskroom, to install GUI apps (binaries)
 brew cask install caskroom/cask/brew-cask
@@ -60,7 +61,8 @@ brew cask install vlc # video
 brew cask install the-unarchiver # unzip and untar
 brew cask install skype
 brew cask install dropbox
-# brew cask install mactex # tex, latex. This takes a long time, do separately
+brew cask install mactex # tex, latex. This takes a long time, do separately
+brew install opendetex # better detexify
 brew cask install apptrap # proper uninstallation of apps
 brew cask install spectacle # must launch, and add to self-startup manually
 brew cask install cgoban # client for playing go on KGS
@@ -75,6 +77,12 @@ brew cask install julia
 brew cask install garmin-express
 brew cask install boostnote
 brew cask install zotero
+brew cask install adobe-acrobat-reader
+brew cask install adobe-photoshop-lightroom
+brew cask install dozer # minimalistic icon bar
+brew cask install meld # pretty powerful diff gui
+brew cask install transmission
+brew cask install whatsapp
 
 brew tap caskroom/fonts 
 brew cask install font-inconsolata # my favourite font for coding
