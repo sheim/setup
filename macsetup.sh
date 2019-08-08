@@ -56,15 +56,14 @@ brew cask install skype
 brew cask install dropbox
 brew cask install mactex # tex, latex. This takes a long time, do separately
 brew install opendetex # better detexify
-brew cask install apptrap # proper uninstallation of apps
+# brew cask install apptrap # proper uninstallation of apps # NO LONGER NEEDED since I only install things with brew cask :D
 brew cask install spectacle # must launch, and add to self-startup manually
+brew cask install spotify
 brew cask install cgoban # client for playing go on KGS
 brew cask install sabaki
 brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
 brew cask install hipchat # collaboration tool
 brew cask install inkscape
-# brew cask install mendeley-desktop
-brew cask install thunderbird
 brew cask install julia
 # brew cask install handbrake
 brew cask install garmin-express
@@ -80,6 +79,7 @@ brew cask install whatsapp
 brew tap caskroom/fonts 
 brew cask install font-inconsolata # my favourite font for coding
 brew cask install font-inconsolata-for-powerline
+brew cask install font-hack-nerd-font
 
 # Set up git settings
 # On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
