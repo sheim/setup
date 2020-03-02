@@ -26,14 +26,13 @@ fi
 
 echo_warn "Installing standard homebrew libraries"
 
-brew install git pandoc wget youtube-dl htop fdupes todolist
+brew install git pandoc wget youtube-dl htop fdupes ultralist
 brew install ffmpeg imagemagick ghostscript git-lfs git-latexdiff
-brew install autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg gdb
-brew install libpng libtool libyaml mpfr ninja numpy python valgrind
-
+# brew install autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg gdb
+# brew install libpng libtool libyaml mpfr ninja numpy python valgrind
 
 # setup homebrew caskroom, to install GUI apps (binaries)
-brew cask install caskroom/cask/brew-cask
+# brew cask install caskroom/cask/brew-cask
 
 echo_warn "Installing apps..."
 # Mostly standard apps
@@ -42,10 +41,10 @@ brew install sshfs
 brew cask install xquartz
 brew cask install java
 brew cask install keepingyouawake # alternative to caffeine
-brew cask install sublime-text # best text editor ever.
-brew cask install visual-studio-code # MSFT version of sublime, <3Joao
+brew cask install sublime-text # best text editor until vscode
+brew cask install visual-studio-code # new best text editor evah, <3 Joao
 brew cask install karabiner-elements # keymapping
-brew cask install flux # adjust screen to be eye-friendly
+# brew cask install flux # adjust screen to be eye-friendly
 brew cask install google-chrome
 brew cask install firefox
 brew cask install iterm2 # best terminal
@@ -54,23 +53,23 @@ brew cask install vlc # video
 brew cask install the-unarchiver # unzip and untar
 brew cask install skype
 brew cask install dropbox
-brew cask install mactex # tex, latex. This takes a long time, do separately
-brew install opendetex # better detexify
+# brew cask install mactex # tex, latex. This takes a long time, do separately
+# brew install opendetex # better detexify
 # brew cask install apptrap # proper uninstallation of apps # NO LONGER NEEDED since I only install things with brew cask :D
 brew cask install spectacle # must launch, and add to self-startup manually
 brew cask install spotify
 brew cask install cgoban # client for playing go on KGS
 brew cask install sabaki
-brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
+# brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
 brew cask install hipchat # collaboration tool
-brew cask install inkscape
-brew cask install julia
+# brew cask install inkscape
+# brew cask install julia
 # brew cask install handbrake
 brew cask install garmin-express
 brew cask install boostnote
-brew cask install zotero
+# brew cask install zotero
 brew cask install adobe-acrobat-reader
-brew cask install adobe-photoshop-lightroom
+# brew cask install adobe-photoshop-lightroom
 brew cask install dozer # minimalistic icon bar
 brew cask install meld # pretty powerful diff gui
 brew cask install transmission
@@ -80,6 +79,9 @@ brew tap caskroom/fonts
 brew cask install font-inconsolata # my favourite font for coding
 brew cask install font-inconsolata-for-powerline
 brew cask install font-hack-nerd-font
+brew cask install font-fontawesome
+brew cask install grammarly
+brew cask install sensiblesidebuttons
 
 # Set up git settings
 # On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
