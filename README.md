@@ -1,7 +1,8 @@
 # Setup script
 
-Just a bash script (for now) to automize a lot of set up stuff when getting a new mac. This includes setting up [homebrew](http://brew.sh/), then mostly using `brew` to install several rather standard libraries and `brew cask` to install several apps (see list below). Also, some settings are done for system preferences to be the way I like them. You probably have different preferences, so the script will ask if you want to do this (amongst other things, it removes almost everying from the dock, so you have a clean slate).  If you have comments or suggestions (or anything else), feel free to just start an issue or drop me a line.
+Just a bash script (for now) to automize a lot of set up stuff when getting a new mac. This includes setting up [homebrew](http://brew.sh/), then mostly using `brew` to install several rather standard libraries and `brew cask` to install several apps (see list below). Also, some settings are done for system preferences to be the way I like them. You probably have different preferences, so the script will ask if you want to do this (amongst other things, it removes almost everything from the dock, so you have a clean slate).
 
+**STALE** I've been updating the setup script sporadically, but not the README. Inspect the actual script before running to comment out what you don't want, or add what you do.
 ## List of libraries
 - **git** the ubiquitous git VCS
 - **pandoc** a useful command-line tool for translating markdown to other formats (such as wiki markup)
@@ -74,5 +75,3 @@ Under `Sublime Text > Preferences > Key Bindings`, add the following to obtain t
     { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 ]
 ```
-
-**To Do:** Add the Sublime Text preferences here, to be pulled directly.

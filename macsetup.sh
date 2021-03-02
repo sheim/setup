@@ -26,62 +26,73 @@ fi
 
 echo_warn "Installing standard homebrew libraries"
 
-brew install git pandoc wget youtube-dl htop fdupes ultralist
+brew install git wget youtube-dl htop fdupes ultralist julia
 brew install ffmpeg imagemagick ghostscript git-lfs git-latexdiff
-# brew install autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg gdb
-# brew install libpng libtool libyaml mpfr ninja numpy python valgrind
+brew install bibutils cmake libmagic librsvg nmap p7zip pandoc pandoc-citeproc
+brew install pandoc-crossref pdf2svg pdftk-java rbenv source-highlight sshfs
+# exercism fish gnu-sed go jansson katago node opencv openjdk@11
+# autoconf automake cmake doxygen gcc glib graphviz gtk+ jpeg gdb
+# libpng libtool libyaml mpfr ninja numpy python valgrind jansson
 
 # setup homebrew caskroom, to install GUI apps (binaries)
 # brew cask install caskroom/cask/brew-cask
+# Deprecated! Brew cask is now integral to brew
 
 echo_warn "Installing apps..."
 # Mostly standard apps
-brew cask install osxfuse
-brew install sshfs
-brew cask install xquartz
-brew cask install java
-brew cask install keepingyouawake # alternative to caffeine
-brew cask install sublime-text # best text editor until vscode
-brew cask install visual-studio-code # new best text editor evah, <3 Joao
-brew cask install karabiner-elements # keymapping
-# brew cask install flux # adjust screen to be eye-friendly
-brew cask install google-chrome
-brew cask install firefox
-brew cask install iterm2 # best terminal
-brew cask install nvalt # fork of notational-velocity, a little less pretty but better markdown support
-brew cask install vlc # video
-brew cask install the-unarchiver # unzip and untar
-brew cask install skype
-brew cask install dropbox
-# brew cask install mactex # tex, latex. This takes a long time, do separately
-# brew install opendetex # better detexify
-# brew cask install apptrap # proper uninstallation of apps # NO LONGER NEEDED since I only install things with brew cask :D
-brew cask install spectacle # must launch, and add to self-startup manually
-brew cask install spotify
-brew cask install cgoban # client for playing go on KGS
-brew cask install sabaki
-# brew cask install flip4mac # handy for wmv videos (mostly for powerpoint)
-brew cask install hipchat # collaboration tool
-# brew cask install inkscape
-# brew cask install julia
-# brew cask install handbrake
-brew cask install garmin-express
-brew cask install boostnote
-# brew cask install zotero
-brew cask install adobe-acrobat-reader
-# brew cask install adobe-photoshop-lightroom
-brew cask install dozer # minimalistic icon bar
-brew cask install meld # pretty powerful diff gui
-brew cask install transmission
-brew cask install whatsapp
+brew install osxfuse
+brew install xquartz
+brew install java
+brew install sublime-text # best text editor until vscode
+brew install visual-studio-code # new best text editor evah, <3 Joao
+brew install google-chrome
+brew install firefox
+brew install iterm2 # best terminal
+brew install nvalt # fork of notational-velocity, a little less pretty but better markdown support
+brew install vlc # video
+brew install the-unarchiver # unzip and untar
+brew install skype
+brew install dropbox
+brew install zoom.us
+# brew install apptrap # proper uninstallation of apps # NO LONGER NEEDED since I only install things with brew :D
+brew install spotify
+brew install cgoban # client for playing go on KGS
+brew install sabaki
+# brew install flip4mac # handy for wmv videos (mostly for powerpoint)
+brew install mattermost # collaboration tool
+# brew install inkscape
+# brew install handbrake
+brew install garmin-express
+brew install boostnote
+brew install nordvpn  
+brew install papers  # ReadCube Papers app
+brew install obs  # Screen-recording
+# brew install zotero
+brew install adobe-acrobat-reader
+brew install meld # pretty powerful diff gui
+brew install transmission
+brew install whatsapp
+brew install blender
+brew install slack
+# brew install grammarly
+# install some widgets
+brew install sensiblesidebuttons  # enables side-buttons on some mice
+brew install monitorcontrol  # widget to control external monitor brightness
+brew install dozer # minimalistic icon bar
+brew install keepingyouawake # alternative to caffeine
+brew install karabiner-elements # keymapping
+# brew install flux # adjust screen to be eye-friendly, now built-in to mac
+brew install spectacle # must launch, and add to self-startup manually
 
 brew tap caskroom/fonts 
-brew cask install font-inconsolata # my favourite font for coding
-brew cask install font-inconsolata-for-powerline
-brew cask install font-hack-nerd-font
-brew cask install font-fontawesome
-brew cask install grammarly
-brew cask install sensiblesidebuttons
+brew install font-inconsolata # my favourite font for coding
+brew install font-inconsolata-for-powerline
+brew install font-hack-nerd-font
+brew install font-fontawesome
+brew install font-nimbus-sans-l
+
+brew install mactex-no-gui # tex, latex. This takes a long time, do separately
+brew install opendetex # better detexify, install _after_ mactex
 
 # Set up git settings
 # On Macs, Finder creates in every folder a .DS_Store file. This can get annoying if you mistakenly add it to your git local repository with a `git add --all`, so let's add this to .gitignore_global
@@ -92,8 +103,10 @@ echo "**/._.DS_Store" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 # Use diff3 format, for much easier conflict merging
 git config --global merge.conflictstyle diff3
-# Use keychain to manage your passwords ### This should be done automatically by homebrew
+# Use keychain to manage your passwords DEPRECATED
+# This should be done automatically by homebrew now
 # git config --global credential.helper osxkeychain
+
 # use Sublime as standard git editor
 git config --global core.editor subl
 
@@ -138,6 +151,7 @@ echo_ok "You should set up your `git config --global user.name and user.email`"
 # echo
 # if [[ $REPLY =~ ^[Yy]$ ]]
 # then
+# macOS has now switched the default shell to zsh, which should be just as good
   brew install fish
   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells # add to shells
   chsh -s /usr/local/bin/fish # make default
