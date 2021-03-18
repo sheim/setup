@@ -7,24 +7,24 @@ No guarantees.
 
 ## Useful shortcuts to know for newcomers to macOS  
 
-`cmd + spacebar`: default hotkey to `spotlight`
-`cmd + tab`: switch between apps
-``cmd + ` ``: switch between windows of the current app
-`cmd + L`: go to search bar (in most apps)
-`/`: go to search bar (in some websites, like GMail)
-`cmd + ,`: go to preferences of current app
-`spacebar`: quicklook of selected file
-`cmd + up`: navigate out of current folder
-`cmd + down`: navigate into a folder, or open the file
-`cmd + n`: open new window of current app
-`shift + cmd + n`: create new folder in Finder
-`enter`: rename file
-`cmd + backspace`: delete file
-`ctrl + a`: go to start of line
-`ctrl + e`: go to end of line
-`ctrl + k`: delete from cursor to end of line
-`ctrl + tab`: go to next tab
-`ctrl + shift + tab:` go to previous tab
+`cmd + spacebar`: default hotkey to `spotlight`  
+`cmd + tab`: switch between apps  
+``cmd + ` ``: switch between windows of the current app  
+`cmd + L`: go to search bar (in most apps)  
+`/`: go to search bar (in some websites, like GMail)  
+`cmd + ,`: go to preferences of current app  
+`spacebar`: quicklook of selected file  
+`cmd + up`: navigate out of current folder  
+`cmd + down`: navigate into a folder, or open the file  
+`cmd + n`: open new window of current app  
+`shift + cmd + n`: create new folder in Finder  
+`enter`: rename file  
+`cmd + backspace`: delete file  
+`ctrl + a`: go to start of line  
+`ctrl + e`: go to end of line  
+`ctrl + k`: delete from cursor to end of line  
+`ctrl + tab`: go to next tab  
+`ctrl + shift + tab:` go to previous tab  
 
 **Note:** I strongly recommend remapping the `caps-lock` to a `ctrl`, it makes several of these shortcuts a lot more comfortable. You can do this under `Preferences > Keyboard > Keyboard > Modifier Keys...` or with the Karabiner app (better if you're going to remap other things too).
 
