@@ -2,54 +2,49 @@
 
 Just a bash script (for now) to automate a lot of set up stuff when getting a new mac. This is mainly about setting up [homebrew](http://brew.sh/), then using `brew` to install other stuff.
 Also, some settings are done for system preferences to be the way I like them.
-I strongly recommend looking through the script and adjusting to your own liking, and not just running it blindly.
+I recommend looking through the script and adjusting to your own liking, and not just running it blindly.
 No guarantees.
 
-## Useful things to know about macOS  
+## Useful shortcuts to know for newcomers to macOS  
 
+`cmd + spacebar`: default hotkey to `spotlight`
+`cmd + tab`: switch between apps
+``cmd + ` ``: switch between windows of the current app
+`cmd + L`: go to search bar (in most apps)
+`/`: go to search bar (in some websites, like GMail)
+`cmd + ,`: go to preferences of current app
+`spacebar`: quicklook of selected file
+`cmd + up`: navigate out of current folder
+`cmd + down`: navigate into a folder, or open the file
+`cmd + n`: open new window of current app
+`shift + cmd + n`: create new folder in Finder
+`enter`: rename file
+`cmd + backspace`: delete file
+`ctrl + a`: go to start of line
+`ctrl + e`: go to end of line
+`ctrl + k`: delete from cursor to end of line
+`ctrl + tab`: go to next tab
+`ctrl + shift + tab:` go to previous tab
 
-## List of libraries
-- **git** the ubiquitous git VCS
-- **pandoc** a useful command-line tool for translating markdown to other formats (such as wiki markup)
-- **wget** get stuff from the web (required by other stuff)
-- **youtube-dl** command-line tool for downloading youtube videos
-- **htop** the ubiquitous process viewer (think Activity monitor in the terminal)
-- **fdupes** find (and delete) duplicate files by comparing md5s
-- **todolist** lightweight todo list in the terminal
-- **autoconf, automake, cmake, doxygen, gcc, etc...** programming tools, mostly C++ and Python related
+**Note:** I strongly recommend remapping the `caps-lock` to a `ctrl`, it makes several of these shortcuts a lot more comfortable. You can do this under `Preferences > Keyboard > Keyboard > Modifier Keys...` or with the Karabiner app (better if you're going to remap other things too).
 
 ## Git set-up
 Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight and other things. See [wiki](https://en.wikipedia.org/wiki/.DS_Store) and [se](http://apple.stackexchange.com/questions/69467/consequences-of-deleting-ds-store). This can get annoying if you mistakenly add it to a repository with `git add --all`, as it will continuously change (and you definitely don't want to push it to a remote). So it gets added to `.gitignore_global` for all our local repos.
 
-## List of apps
+## Some recommended Apps
+Check the actual setup script for all the apps. Here are some I recommend you start using, which you may not be familiar with if you're new to macOS.
+
 - **osxfuse** mount remote drives with sshfs
-- **xquartz** window system used for several apps
-- **Java**
 - **keepingyouawake** menu-bar app for keeping your machine from sleeping (fork from caffeine)
-- [**sublime-text**](https://www.sublimetext.com/) a fantastic text editor, which I now use for everything from python to LaTeX
-- **visual-studio-code** A text-editor similar to sublime-text, nice for markdown amongst other things. :heart: JD
-- **karabiner-elements** Key-remapping app, the continuation of Karabiner. Used to use this in Japan to remap JIS keyboard (which have a lot of extra buttons, it was fantastic).
-- **flux** A nice little app that changes the amount of blue hue in your screen depending on the time of day, to mimic natural light
-- **google-chrome**
-- **firefox**
-- **iterm2** A great terminal, completely eclipses the default macOS terminal
+- **karabiner-elements** Key-remapping app, the continuation of Karabiner
+- **iterm2** A better terminal
 - [**nvalt**](http://brettterpstra.com/projects/nvalt/) A fantastic, lightweight note-taker. This is a fork from [notational-velocity](http://notational.net/), which I think is actually prettier, but unfortunately doesn't have markdown support.
-- **vlc** the most reliable video-player
-- **the-unarchiver**
-- **skype**
-- **dropbox**
-- **mactex** Full LaTeX setup for mac
-- **apptrap** Nifty app for making sure all app-files are removed when moving an app to the garbage bin
 - **spectacle** menu-bar app providing hotkeys for resizing windows how you want (which has been built-into msft windows forever)
 - **cgoban** Client for playing go on the KGS server
+- **sabaki** really nice client for editing SGF files
+- **BoostNote** nice note-taking
+- **SensibleSideButtons** enabls side-buttons on some mice
 - **flip4mac** to convert `.wmv` format videos, especially in powerpoint presentations.
-- **hipchat** collaboration chat from Atlassian Confluence
-- **handbrake** video conversion tool
-
-- **inconsolata** a great font (not an app) for coding
-
-
-- **fish** a great little shell alternative to bash, with a lot of automatic coloring, auto-complete etc.
 
 ## Settings
 Script asks if you want to do these, so you can run the script just for the libraries/apps too.
@@ -63,9 +58,6 @@ Script asks if you want to do these, so you can run the script just for the libr
 - Place dock on the left, vertically
 - Set windows to minimize instead of having fancy genie-effects
 - Tell Chrome to use system-dialog for printing instead of built-in dialog (I like consistency) 
-
-## Other settings I recommend
-Set the caps-lock button (which I never use, but is placed in a really ergonomic position) to ctrl, and set Spotlight to active with ctrl+spacebar (instead of cmd+spacebar). Inspired from the JIS keyboard, this is fantastic.
 
 #### iterm2
 Under Preferences > Keys > KeyMappings, change `^+tab` to `Next Tab` and `^+shift+tab` to `Previous Tab`, to match Chrome behaviour (and be more intuitive imho).  
