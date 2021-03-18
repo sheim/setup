@@ -1,8 +1,13 @@
 # Setup script
 
-Just a bash script (for now) to automize a lot of set up stuff when getting a new mac. This includes setting up [homebrew](http://brew.sh/), then mostly using `brew` to install several rather standard libraries and `brew cask` to install several apps (see list below). Also, some settings are done for system preferences to be the way I like them. You probably have different preferences, so the script will ask if you want to do this (amongst other things, it removes almost everything from the dock, so you have a clean slate).
+Just a bash script (for now) to automate a lot of set up stuff when getting a new mac. This is mainly about setting up [homebrew](http://brew.sh/), then using `brew` to install other stuff.
+Also, some settings are done for system preferences to be the way I like them.
+I strongly recommend looking through the script and adjusting to your own liking, and not just running it blindly.
+No guarantees.
 
-**STALE** I've been updating the setup script sporadically, but not the README. Inspect the actual script before running to comment out what you don't want, or add what you do.
+## Useful things to know about macOS  
+
+
 ## List of libraries
 - **git** the ubiquitous git VCS
 - **pandoc** a useful command-line tool for translating markdown to other formats (such as wiki markup)
@@ -43,8 +48,7 @@ Apple Finder automatically creates a `.DS_Store` file in every folder, spotlight
 
 - **inconsolata** a great font (not an app) for coding
 
-### Optional (on ask)
-- **microsoft office 2011**
+
 - **fish** a great little shell alternative to bash, with a lot of automatic coloring, auto-complete etc.
 
 ## Settings
@@ -60,7 +64,7 @@ Script asks if you want to do these, so you can run the script just for the libr
 - Set windows to minimize instead of having fancy genie-effects
 - Tell Chrome to use system-dialog for printing instead of built-in dialog (I like consistency) 
 
-## Further small settings I like:
+## Other settings I recommend
 Set the caps-lock button (which I never use, but is placed in a really ergonomic position) to ctrl, and set Spotlight to active with ctrl+spacebar (instead of cmd+spacebar). Inspired from the JIS keyboard, this is fantastic.
 
 #### iterm2
