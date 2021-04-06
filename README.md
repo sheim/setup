@@ -7,7 +7,7 @@ No guarantees.
 
 ## Useful shortcuts to know for newcomers to macOS  
 
-`cmd + spacebar`: default hotkey to `spotlight`  
+`cmd + spacebar`: default hotkey to Spotlight. Note, I remap this to switch between language inputs, and use `ctrl + spacebar` for Spotlight (which is more comfy _if_ you use `caps-lock` as a `ctrl`).
 `cmd + tab`: switch between apps  
 ``cmd + ` ``: switch between windows of the current app  
 `cmd + L`: go to search bar (in most apps)  
