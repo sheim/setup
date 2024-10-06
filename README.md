@@ -1,6 +1,6 @@
 # Setup script
 
-Just a bash script (for now) to automate a lot of set up stuff when getting a new mac. This is mainly about setting up [homebrew](http://brew.sh/), then using `brew` to install other stuff.
+Just a bash script to automate a lot of set up stuff when getting a new mac. This is mainly about setting up [homebrew](http://brew.sh/), then using `brew` to install other stuff.
 Also, some settings are done for system preferences to be the way I like them.
 I recommend looking through the script and adjusting to your own liking, and not just running it blindly.
 No guarantees.
@@ -42,9 +42,8 @@ Check the actual setup script for all the apps. Here are some I recommend you st
 - **spectacle** menu-bar app providing hotkeys for resizing windows how you want (which has been built-into msft windows forever)
 - **cgoban** Client for playing go on the KGS server
 - **sabaki** really nice client for editing SGF files
-- **BoostNote** nice note-taking
-- **SensibleSideButtons** enabls side-buttons on some mice
-- **flip4mac** to convert `.wmv` format videos, especially in powerpoint presentations.
+- **SensibleSideButtons** enables side-buttons on some mice
+- **Maccy** clipboard manager
 
 ## Settings
 Script asks if you want to do these, so you can run the script just for the libraries/apps too.
@@ -62,12 +61,3 @@ Script asks if you want to do these, so you can run the script just for the libr
 #### iterm2
 Under Preferences > Keys > KeyMappings, change `^+tab` to `Next Tab` and `^+shift+tab` to `Previous Tab`, to match Chrome behaviour (and be more intuitive imho).  
 Change font to _Inconsolata_ 16pt, and `Non-ASCII Font` to _Inconsolata for Powerline_ 16pt.
-
-#### Sublime Text 3
-Under `Sublime Text > Preferences > Key Bindings`, add the following to obtain the same tabbing behaviour as Chrome (simple next/previous).  
-```
-[
-    { "keys": ["ctrl+tab"], "command": "next_view" },
-    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-]
-```
